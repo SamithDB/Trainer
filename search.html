@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/frontpages.css">
+  <title>Trainer.com</title>
+</head>
+
+<!-- Main Page NavBar -->
+<body id="home" data-spy="scroll" data-target="#main-nav">
+  <nav class="navbar navbar-expand-md navbar-light fixed-top py-4" id="main-nav">
+    <div class="container">
+      <a href="index.html" class="navbar-brand">
+        <img src="img/tlogo.png" width="75" height="75" alt="">
+        <h3 class="d-inline align-middle">Trainer.com</h3>
+      </a>
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+              <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Categories
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="search.html">Web Development</a>
+                <a class="dropdown-item" href="search.html">Cloud Computing</a>
+                <a class="dropdown-item" href="search.html">Cloud Computing</a>
+                <a class="dropdown-item" href="search.html">UI/UX</a>
+                <a class="dropdown-item" href="search.html">Programming</a>
+              </div>
+              </div>
+          </li>
+          <li class="nav-item">
+            <a href="#contact" class="nav-link">Subscribe</a>
+          </li>
+          <li class="nav-item">
+            <a href="login.html" class="nav-link">Login</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- BOXES -->
+  <section id="boxes" class="py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="card text-center border-primary mb-resp">
+              <div class="card-body">
+                <h3 class="text-primary">Web Development</h3>
+                <p>NodeJS , Java Frameworks , PHP Frameworks</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card text-center bg-primary text-white mb-resp">
+              <div class="card-body">
+                <h3>Cloud Computing</h3>
+                <p>GCP courses , AWS courses , Azure courses</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card text-center border-primary mb-resp">
+              <div class="card-body">
+                <h3 class="text-primary">UI/UX</h3>
+                <p>Photoshop Tutorial , Boostrap courses , CSS , HTML  , JAVA Script</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card text-center bg-primary text-white">
+              <div class="card-body">
+                <h3>Programming</h3>
+                <p>JAVA , Python , C++ Programming , C Programming</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <!-- Search Bar -->
+  <section id="newsletter" class="bg-dark text-white py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7">
+          <input type="text" class="form-control form-control-lg mb-resp" placeholder="Find Your Course">
+        </div>
+        <div class="col-md-3">
+            <select class="form-control form-control-lg mb-resp">
+                <option selected value="0">Any</option>
+                <option value="1">Web Development</option>
+                <option value="2">Cloud Computing</option>
+                <option value="3">UI/UX</option>
+                <option value="3">Programming</option>
+            </select>
+        </div>
+        <div class="col-md-2">
+          <button class="btn btn-primary btn-lg btn-block">
+            <i class="fas fa-envelope-open-o"></i> Search
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Search Results -->
+  <section id="result" class="bg-light py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3">
+          <h3>Search Results...</h3>
+          <p class="lead">Filter by category</p>
+          <a href="#">Web Development</a><br>
+          <a href="#">Cloud Computing</a><br>
+          <a href="#">UI/UX</a><br>
+          <a href="#">Programming</a><br>
+        </div>
+
+        <div class="col-lg-9">
+          <table class="table">
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>
+                    <div class="card" style="width: 18rem;">
+                    <img src="../img/java_course.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                          <h6 class="card-subtitle mb-2 text-muted">Category: Web Development</h6>
+                      </div>
+                    </div>
+                </td>
+                <td>
+                  <h4>Full Stack Web Development</h4> 
+                  <b>STech stack</b> <br>
+                   Java Spring , Angular JS 
+                </td>
+                <td>
+                    <button type="button" class="btn btn-light">Enroll to the course</button> <br>
+                    <button type="button" class="btn btn-light">Details of the course</button>
+                </td>
+              </tr>
+              <tr>
+                  <th scope="row">2</th>
+                  <td>
+                      <div class="card" style="width: 18rem;">
+                      <img src="../img/php_course.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h6 class="card-subtitle mb-2 text-muted">Category: Web Development</h6>
+                        </div>
+                      </div>
+                  </td>
+                  <td>
+                    <h4>PHP Web Development</h4> 
+                    <b>STech stack</b> <br>
+                     PHP , Mysql
+                  </td>
+                  <td>
+                      <button type="button" class="btn btn-light">Enroll to the course</button> <br>
+                      <button type="button" class="btn btn-light">Details of the course</button>
+                  </td>
+                </tr><tr>
+                    <th scope="row">3</th>
+                    <td>
+                        <div class="card" style="width: 18rem;">
+                        <img src="../img/ui_course.jpg" class="card-img-top" alt="...">
+                          <div class="card-body">
+                              <h6 class="card-subtitle mb-2 text-muted">Category: UI/UX</h6>
+                          </div>
+                        </div>
+                    </td>
+                    <td>
+                      <h4>Full Stack Web Development</h4> 
+                      <b>STech stack</b> <br>
+                       Java Spring , Angular JS 
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-light">Enroll to the course</button> <br>
+                        <button type="button" class="btn btn-light">Details of the course</button>
+                    </td>
+                  </tr>
+            </tbody>
+          </table>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="bg-light py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-9">
+          <h3>Subscribe</h3>
+          <p class="lead">Get latest information about our new courses!</p>
+          <form>
+            <div class="input-group input-group-lg mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">
+                  <i class="fas fa-user"></i>
+                </span>
+              </div>
+              <input type="text" class="form-control" placeholder="Name">
+            </div>
+
+            <div class="input-group input-group-lg mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">
+                  <i class="fas fa-envelope"></i>
+                </span>
+              </div>
+              <input type="text" class="form-control" placeholder="Email">
+            </div>
+
+            <input type="submit" value="Subscribe" class="btn btn-primary btn-block btn-lg">
+          </form>
+        </div>
+
+        <div class="col-lg-3 align-self-center">
+          <img src="img/tlogo.png" alt="" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="main-footer" class="py-5 bg-primary text-white">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-md-6 ml-auto">
+          <p class="lead">
+            Copyright &copy;
+            <span id="year"></span>
+            Trainer.com
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  
+  <script>
+    // Get the current year for the copyright
+    $('#year').text(new Date().getFullYear());
+
+    // Init Scrollspy
+    $('body').scrollspy({ target: '#main-nav' });
+
+    // Smooth Scrolling
+    $("#main-nav a").on('click', function (event) {
+      if (this.hash !== "") {
+        event.preventDefault();
+
+        const hash = this.hash;
+
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 800, function () {
+
+          window.location.hash = hash;
+        });
+      }
+    });
+  </script>
+</body>
+
+</html>
