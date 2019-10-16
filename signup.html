@@ -17,7 +17,7 @@
   <nav class="navbar navbar-expand-sm navbar-dark bg-dark p-0">
     <div class="container">
       <a href="index.html" class="navbar-brand">Trainer.com</a>
-      <a href="signup.html" class="navbar-brand">Sign up</a>
+      <a href="login.html" class="navbar-brand">Sign In</a>
     </div>
   </nav>
 
@@ -27,7 +27,7 @@
       <div class="row">
         <div class="col-md-6">
           <h1>
-            <i class="fas fa-user"></i> Sign In</h1>
+            <i class="fas fa-user"></i> Sign Up</h1>
         </div>
       </div>
     </div>
@@ -42,7 +42,7 @@
     </div>
   </section>
 
-  <!-- LOGIN -->
+  <!-- Sign Up -->
   <section id="login">
     <div class="container">
       <div class="row">
@@ -50,32 +50,73 @@
         <div class="col-md-6 mx-auto">
           <div class="card">
             <div class="card-header">
-              <h4>Account Login</h4>
+              <h4>User Account</h4>
             </div>
             <div class="card-body">
               <form action="dashbord.html">
                 <div class="form-group">
-                  <label for="email">Email / User name</label>
-                  <input type="text" class="form-control">
+                  <label for="email">Name</label>
+                  <div class="row">
+                    <div class="col">
+                      <input type="text" class="form-control" placeholder="First name">
+                    </div>
+                    <div class="col">
+                      <input type="text" class="form-control" placeholder="Last name">
+                    </div>
+                  </div>
                 </div>
                 <div class="form-group">
-                  <label for="password">Password</label>
+                    <label for="email">Pick a User Name</label>
+                    <input type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                  <label for="email">Your Email</label>
+                  <input type="text" class="form-control">
+                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+                <div class="form-group">
+                  <label for="password">Your Password</label>
                   <input type="password" class="form-control">
                 </div>
-                <input type="submit" value="Login" class="btn btn-primary btn-block">
+                <div class="form-group">
+                    <label for="password">Retype the Password</label>
+                    <input type="password" class="form-control">
+                </div>
+                <div class="form-group form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1" muted>Agree to our Terms & Conditions, Visitor Agreement and Privacy Policy.</label>
+                </div>
+                <input type="submit" value="Register" class="btn btn-primary btn-block">
               </form>
-              <h6 class="card-subtitle mb-2 mt-2 text-muted">By Sign In , you agree to our Terms of Use and Privacy Policy.</h6>
             </div>
           </div>
         </div>
 
         <div class="col-md-6 mx-auto">
-            <div class="card" style="width: 19rem;">
-              <div class="card-body">
-                  <div class="align-self-center">
-                      <img src="img/tlogo.png" alt="" class="img-fluid">
-                      <h6 class="card-subtitle mb-2 mt-2 text-muted">No account. Please create a new account for <a href="index.html">Trainer.com</a> </h6>
+            <div class="card" >
+              <div class="card-header">
+                <h6 class="card-subtitle mb-2 mt-2 text-muted">Have an account. Please login to <a href="index.html">Trainer.com</a> </h6>
+                <form>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Email / Username</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email or Username">
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                   </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                  </div>
+                  <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+              </div>
+              <div class="card-body">
+                <div class="align-self-center">
+                  <img src="img/tlogo.png" alt="" class="img-fluid" style="width: 18rem;">
+                </div>
               </div>
             </div>
         </div>
