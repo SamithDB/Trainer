@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
     crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
-  <title>Bootstrap Theme</title>
+  <title>Trainer</title>
 </head>
 
 <body>
@@ -55,7 +55,7 @@
       <div class="row">
         <div class="col-md-6">
           <h1>
-            <i class="fas fa-cog"></i> Settings</h1>
+            <i class="fas fa-cog"></i> Dashboard</h1>
         </div>
       </div>
     </div>
@@ -66,49 +66,166 @@
     <div class="container">
       <div class="row">
         <div class="col-md-3">
-          <a href="dashbord.html" class="btn btn-light btn-block">
-            <i class="fas fa-arrow-left"></i> Back To Dashboard
+          <a href="#" class="btn btn-primary btn-block" data-toggle="modal" data-target="#addPostModal">
+            <i class="fas fa-plus"></i> Add new course
           </a>
         </div>
         <div class="col-md-3">
-          
+          <a href="#" class="btn btn-success btn-block" data-toggle="modal" data-target="#addCategoryModal">
+            <i class="fas fa-plus"></i> Add new course category
+          </a>
+        </div>
+        <div class="col-md-3">
+          <a href="#" class="btn btn-warning btn-block" data-toggle="modal" data-target="#addUserModal">
+            <i class="fas fa-plus"></i> Add new user
+          </a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SETTINGS -->
-  <section id="settings">
+  <!-- Courses -->
+  <section id="posts">
     <div class="container">
       <div class="row">
-        <div class="col">
+        <div class="col-md-6">
+          <form class="form-inline md-form mr-auto mb-4">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search Course">
+            <button class="btn" type="submit">Search</button>
+          </form>
           <div class="card">
             <div class="card-header">
-              <h4>Change Your Password</h4>
+              <h4>Information</h4>
             </div>
-            <div class="card-body">
-              <form action="dashbord.html">
-                <div class="form-group">
-                  <label for="email">Your Email</label>
-                  <input type="text" class="form-control">
-                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                </div>
-                <div class="form-group">
-                  <label for="password">Your Old Password</label>
-                  <input type="password" class="form-control">
-                </div>
-                <div class="form-group">
-                  <label for="password">Your New Password</label>
-                  <input type="password" class="form-control">
-                </div>
-                <div class="form-group">
-                    <label for="password">Retype the New Password</label>
-                    <input type="password" class="form-control">
-                </div>
-                <input type="submit" value="Change" class="btn btn-primary btn-block">
-              </form>
+            <table class="table table-striped">
+              <thead class="thead-dark">
+                <tr>
+                  <th>#</th>
+                  <th>Course</th>
+                  <th>Category</th>
+                  <th>Publish date</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Course One</td>
+                  <td>Web Development</td>
+                  <td>May 10 2019</td>
+                  <td>
+                    <a href="details.html" class="btn btn-secondary">
+                      <i class="fas fa-angle-double-right"></i> Details
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Course Two</td>
+                  <td>Ui/UX</td>
+                  <td>Pending</td>
+                  <td>
+                    <a href="details.html" class="btn btn-secondary">
+                      <i class="fas fa-angle-double-right"></i> Details
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Course Three</td>
+                  <td>Web Development</td>
+                  <td>Sep 13 2019</td>
+                  <td>
+                    <a href="details.html" class="btn btn-secondary">
+                      <i class="fas fa-angle-double-right"></i> Details
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>Course Four</td>
+                  <td>OOP</td>
+                  <td>Pending</td>
+                  <td>
+                    <a href="details.html" class="btn btn-secondary">
+                      <i class="fas fa-angle-double-right"></i> Details
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>Course Five</td>
+                  <td>Web Development</td>
+                  <td>Nov 17 2019</td>
+                  <td>
+                    <a href="details.html" class="btn btn-secondary">
+                      <i class="fas fa-angle-double-right"></i> Details
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>Course Six</td>
+                  <td>SE</td>
+                  <td>Dec 20 2019</td>
+                  <td>
+                    <a href="details.html" class="btn btn-secondary">
+                      <i class="fas fa-angle-double-right"></i> Details
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-header">
+              <h4>Approvals... </h4>
             </div>
           </div>
+          <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Course</th>
+                  <th>Category</th>
+                  <th>
+                    
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>4</td>
+                  <td>Course Four</td>
+                  <td>Web Development</td>
+                  <td>
+                    <a href="course.html" class="btn btn-secondary">
+                      <i class="fas fa-angle-double-right"></i> View
+                    </a>
+                  </td>
+                  <td>
+                    <a href="" class="btn btn-secondary"></i> Approve
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Course Two</td>
+                  <td>Ui/UX</td>
+                  <td>
+                    <a href="course.html" class="btn btn-secondary">
+                      <i class="fas fa-angle-double-right"></i> View
+                    </a>
+                  </td>
+                  <td>
+                    <a href="" class="btn btn-secondary">Approve
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>     
         </div>
       </div>
     </div>
@@ -122,7 +239,7 @@
           <p class="lead text-center">
             Copyright &copy;
             <span id="year"></span>
-            Blogen
+            Trainer.com
           </p>
         </div>
       </div>
@@ -132,12 +249,12 @@
 
   <!-- MODALS -->
 
-  <!-- ADD POST MODAL -->
+  <!-- ADD COURSE MODAL -->
   <div class="modal fade" id="addPostModal">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <div class="modal-header bg-primary text-white">
-          <h5 class="modal-title">Add Post</h5>
+          <h5 class="modal-title">Add Course</h5>
           <button class="close" data-dismiss="modal">
             <span>&times;</span>
           </button>
@@ -152,9 +269,9 @@
               <label for="category">Category</label>
               <select class="form-control">
                 <option value="">Web Development</option>
-                <option value="">Tech Gadgets</option>
-                <option value="">Business</option>
-                <option value="">Health & Wellness</option>
+                <option value="">Cloud Computing</option>
+                <option value="">UI/UX</option>
+                <option value="">Programming</option>
               </select>
             </div>
             <div class="form-group">
@@ -166,8 +283,12 @@
               <small class="form-text text-muted">Max Size 3mb</small>
             </div>
             <div class="form-group">
-              <label for="body">Body</label>
-              <textarea name="editor1" class="form-control"></textarea>
+              <label for="body">Tech Stack</label>
+              <textarea  class="form-control"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="body">Description</label>
+              <textarea  class="form-control"></textarea>
             </div>
           </form>
         </div>
@@ -208,7 +329,7 @@
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <div class="modal-header bg-warning text-white">
-          <h5 class="modal-title">Add User</h5>
+          <h5 class="modal-title">Add new mentor</h5>
           <button class="close" data-dismiss="modal">
             <span>&times;</span>
           </button>
@@ -216,7 +337,7 @@
         <div class="modal-body">
           <form>
             <div class="form-group">
-              <label for="name">Name</label>
+              <label for="name">User name</label>
               <input type="text" class="form-control">
             </div>
             <div class="form-group">
