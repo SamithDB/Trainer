@@ -67,12 +67,18 @@
         <div class="row">
           
           <div class="col-lg-3">
-              <div class="card" style="width: 18rem;">
-                  <img src="../img/java_course.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h6 class="card-subtitle mb-2 text-muted">Category: Web Development</h6>
-                    </div>
+            <div class="card" style="width: 18rem;">
+              <img src="../img/java_course.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h6 class="card-subtitle mb-2 text-muted">Category: Web Development</h6>
               </div>
+              <a href="#" class="btn btn-primary btn-block" data-toggle="modal" data-target="#addPostModal">
+                <i class="fas fa-plus"></i> Update course
+              </a>
+              <a href="#" class="btn btn-primary btn-block" >
+                <i class="fas fa-plus"></i> Disable
+              </a>
+            </div>
               <Div>
                 <br>
                 <h4>Full Stack Web Development</h4> 
@@ -88,39 +94,38 @@
               </p>
           </div>
 
-          <div class="col-lg-1">
-
-          </div>
+          <div class="col-lg-1"> </div>
   
           <div class="col-lg-8">
 
             <!-- Video Uploader -->
             <div class="container">
                 <div class="panel panel-default">
-                  <div class="panel-heading"><strong>Upload Video Files<strong></div>
+                  <div class="panel-heading"><strong>Upload Video Files</strong></div>
                   <div class="panel-body">
-          
-                    <!-- Standar Form -->
-                    <p>Select files from your computer</p>
-                    <form method="post" enctype="multipart/form-data" id="js-upload-form">
-                      <div class="form-inline">
-                        <div class="form-group">
-                          <input type="file" name="files[]" id="js-upload-files" multiple>
-                        </div>
-                        <button type="submit" class="btn btn-sm btn-primary" id="js-upload-submit">Upload files</button>
+                    <form >
+                      <div class="form-group">
+                        <label>Video title</label>
+                        <input type="text" class="form-control">
                       </div>
+                      <div class="form-group">
+                        <label>Tech stack</label>
+                        <input type="text" class="form-control">
+                      </div>
+                      <div class="form-group">
+                        <label>Description</label>
+                        <input type="text" class="form-control">
+                      </div>
+                      <div class="form-group">
+                        <input type="file" name="files[]" id="js-upload-files" multiple class="form-control">
+                      </div> 
+                        <button type="submit" class="btn btn-sm btn-primary" id="js-upload-submit">Upload files</button>
                     </form>
           
-                    <!-- Drop Zone -->
-                    <h4>Or drag and drop files below</h4>
-                    <div class="upload-drop-zone" id="drop-zone">
-                      Just drag and drop files here
-                    </div>
-                
                   </div>
                 </div>
               </div>
-
+            <hr>
             <!-- Video list table -->
             <table class="table">
               <tbody>
@@ -140,7 +145,7 @@
                     <b>Description : Development environmrnt setup</b> <br> 
                   </td>
                   <td>
-                    <a href="details.html" class="btn btn-secondary">
+                    <a href="" class="btn btn-secondary">
                       <i class="fas fa-angle-double-right"></i> Delete
                     </a>
                   </td>
@@ -161,7 +166,7 @@
                     <b>Description : Hello World Application</b> <br> 
                   </td>
                   <td>
-                    <a href="details.html" class="btn btn-secondary">
+                    <a href="" class="btn btn-secondary">
                       <i class="fas fa-angle-double-right"></i> Delete
                     </a>  
                   </td>
@@ -182,7 +187,7 @@
                     <b>Description : Installing Angular JS</b> <br> 
                   </td>
                   <td>
-                    <a href="details.html" class="btn btn-secondary">
+                    <a href="" class="btn btn-secondary">
                       <i class="fas fa-angle-double-right"></i> Delete
                     </a>  
                   </td>
@@ -210,117 +215,62 @@
     </div>
   </footer>
 
-
   <!-- MODALS -->
 
-  <!-- ADD POST MODAL -->
+  <!-- ADD COURSE MODAL -->
   <div class="modal fade" id="addPostModal">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header bg-primary text-white">
-          <h5 class="modal-title">Add Post</h5>
-          <button class="close" data-dismiss="modal">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header bg-primary text-white">
+            <h5 class="modal-title">Update Course</h5>
+            <button class="close" data-dismiss="modal">
             <span>&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <form>
-            <div class="form-group">
-              <label for="title">Title</label>
-              <input type="text" class="form-control">
-            </div>
-            <div class="form-group">
-              <label for="category">Category</label>
-              <select class="form-control">
-                <option value="">Web Development</option>
-                <option value="">Tech Gadgets</option>
-                <option value="">Business</option>
-                <option value="">Health & Wellness</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="image">Upload Image</label>
-              <div class="custom-file">
-                <input type="file" class="custom-file-input" id="image">
-                <label for="image" class="custom-file-label">Choose File</label>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div >
+                <label for="title">Title</label>
+                <input type="text" class="form-control" value="Full Stack Web Development">
               </div>
-              <small class="form-text text-muted">Max Size 3mb</small>
-            </div>
-            <div class="form-group">
-              <label for="body">Body</label>
-              <textarea name="editor1" class="form-control"></textarea>
-            </div>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button class="btn btn-primary" data-dismiss="modal">Save Changes</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ADD CATEGORY MODAL -->
-  <div class="modal fade" id="addCategoryModal">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header bg-success text-white">
-          <h5 class="modal-title">Add Category</h5>
-          <button class="close" data-dismiss="modal">
-            <span>&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <form>
-            <div class="form-group">
-              <label for="title">Title</label>
-              <input type="text" class="form-control">
-            </div>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button class="btn btn-success" data-dismiss="modal">Save Changes</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ADD USER MODAL -->
-  <div class="modal fade" id="addUserModal">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header bg-warning text-white">
-          <h5 class="modal-title">Add new mentor</h5>
-          <button class="close" data-dismiss="modal">
-            <span>&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <form>
-            <div class="form-group">
-              <label for="name">User name</label>
-              <input type="text" class="form-control">
-            </div>
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" class="form-control">
-            </div>
-            <div class="form-group">
-              <label for="password">Password</label>
-              <input type="password" class="form-control">
-            </div>
-            <div class="form-group">
-              <label for="password2">Confirm Password</label>
-              <input type="password" class="form-control">
-            </div>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button class="btn btn-warning" data-dismiss="modal">Save Changes</button>
+              <div class="form-group">
+                <label for="category">Category</label>
+                <select class="form-control">
+                  <option value="">Web Development</option>
+                  <option value="">Cloud Computing</option>
+                  <option value="">UI/UX</option>
+                  <option value="">Programming</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="image">Upload Image</label>
+                <div class="custom-file">
+                  <input type="file" class="custom-file-input" id="image">
+                  <label for="image" class="custom-file-label">Choose File</label>
+                </div>
+                <small class="form-text text-muted">Max Size 3mb</small>
+              </div>
+              <div class="form-group">
+                <label for="body">Tech Stack</label>
+                <textarea  class="form-control">Java Spring , Angular JS
+                </textarea>
+              </div>
+              <div class="form-group">
+                <label for="body">Description</label>
+                <textarea  class="form-control">This course is designed to help you master the most in-demand and critical components for becoming
+                   a Core Java developer. Especially if you're going for a job interview or have a Java Project that 
+                   needs your best performance. This course assumes no prior java experience so prior Java so it will 
+                   take you from zero to hero!  
+                </textarea>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-primary" data-dismiss="modal">Save Changes</button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-
 
   <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>

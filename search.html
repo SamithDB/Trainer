@@ -11,7 +11,7 @@
   <title>Trainer.com</title>
 </head>
 
-<!-- Main Page NavBar -->
+<!-- NavBar -->
 <body id="home" data-spy="scroll" data-target="#main-nav">
   <nav class="navbar navbar-expand-md navbar-light fixed-top py-4" id="main-nav">
     <div class="container">
@@ -54,42 +54,46 @@
 
   <!-- BOXES -->
   <section id="boxes" class="py-5">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-3">
-            <div class="card text-center border-primary mb-resp">
-              <div class="card-body">
-                <h3 class="text-primary">Web Development</h3>
-                <p>NodeJS , Java Frameworks , PHP Frameworks</p>
-              </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="card text-center border-primary mb-resp" style="width: 18rem;">
+            <div class="card-body">
+              <h3 class="text-primary">Web Development</h3>
+              <p>NodeJS , Java Frameworks , PHP Frameworks</p>
+              <button class="btn btn-primary">More</button>
             </div>
           </div>
-          <div class="col-md-3">
-            <div class="card text-center bg-primary text-white mb-resp">
-              <div class="card-body">
-                <h3>Cloud Computing</h3>
-                <p>GCP courses , AWS courses , Azure courses</p>
-              </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card text-center bg-primary text-white mb-resp" style="width: 18rem;">
+            <div class="card-body">
+              <h3>Cloud Computing</h3>
+              <p>GCP courses , AWS courses , Azure courses</p>
+              <button class="btn btn-light">More</button>
             </div>
           </div>
-          <div class="col-md-3">
-            <div class="card text-center border-primary mb-resp">
-              <div class="card-body">
-                <h3 class="text-primary">UI/UX</h3>
-                <p>Photoshop Tutorial , Boostrap courses , CSS , HTML  , JAVA Script</p>
-              </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card text-center border-primary mb-resp" style="width: 18rem;">
+            <div class="card-body">
+              <h3 class="text-primary">UI/UX</h3>
+              <p>Photoshop Tutorial , Boostrap courses , CSS , HTML  </p>
+              <button class="btn btn-primary">More</button>
             </div>
           </div>
-          <div class="col-md-3">
-            <div class="card text-center bg-primary text-white">
-              <div class="card-body">
-                <h3>Programming</h3>
-                <p>JAVA , Python , C++ Programming , C Programming</p>
-              </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card text-center bg-primary text-white" style="width: 18rem;">
+            <div class="card-body">
+              <h3>Programming</h3>
+              <p>JAVA , Python , C++ Programming , C Programming</p>
+              <button class="btn btn-light" >More</button>
             </div>
           </div>
         </div>
       </div>
+    </div>
   </section>
 
   <!-- Search Bar -->
@@ -101,11 +105,11 @@
         </div>
         <div class="col-md-3">
             <select class="form-control form-control-lg mb-resp">
-                <option selected value="0">Any</option>
-                <option value="1">Web Development</option>
-                <option value="2">Cloud Computing</option>
-                <option value="3">UI/UX</option>
-                <option value="3">Programming</option>
+              <option selected value="0">Any</option>
+              <option value="1">Web Development</option>
+              <option value="2">Cloud Computing</option>
+              <option value="3">UI/UX</option>
+              <option value="3">Programming</option>
             </select>
         </div>
         <div class="col-md-2">
@@ -139,18 +143,20 @@
                     <div class="card" style="width: 18rem;">
                     <img src="../img/java_course.jpg" class="card-img-top" alt="...">
                       <div class="card-body">
-                          <h6 class="card-subtitle mb-2 text-muted">Category: Web Development</h6>
+                        <h6 class="card-subtitle mb-2 text-muted">Category: Web Development</h6>
                       </div>
                     </div>
                 </td>
                 <td>
                   <h4>Full Stack Web Development</h4> 
-                  <b>STech stack</b> <br>
+                  <b>Tech stack</b><br>
                    Java Spring , Angular JS 
                 </td>
                 <td>
-                    <button type="button" class="btn btn-light">Enroll to the course</button> <br>
-                    <button type="button" class="btn btn-light">Details of the course</button>
+                  <button type="button" class="btn btn-light"><i class="fas fa-plus"></i> Enroll to the course</button> <br>
+                  <a href="#" class="btn btn-success btn-block" data-toggle="modal" data-target="#viewDetailsModal">
+                    Details of the course
+                  </a>
                 </td>
               </tr>
               <tr>
@@ -159,18 +165,20 @@
                       <div class="card" style="width: 18rem;">
                       <img src="../img/php_course.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h6 class="card-subtitle mb-2 text-muted">Category: Web Development</h6>
+                          <h6 class="card-subtitle mb-2 text-muted">Category: Web Development</h6>
                         </div>
                       </div>
                   </td>
                   <td>
                     <h4>PHP Web Development</h4> 
-                    <b>STech stack</b> <br>
+                    <b>Tech stack</b> <br>
                      PHP , Mysql
                   </td>
                   <td>
-                      <button type="button" class="btn btn-light">Enroll to the course</button> <br>
-                      <button type="button" class="btn btn-light">Details of the course</button>
+                    <button type="button" class="btn btn-light"><i class="fas fa-plus"></i> Enroll to the course</button> <br>
+                    <a href="#" class="btn btn-success btn-block" data-toggle="modal" data-target="#viewDetailsModal">
+                      Details of the course
+                    </a>
                   </td>
                 </tr><tr>
                     <th scope="row">3</th>
@@ -178,18 +186,20 @@
                         <div class="card" style="width: 18rem;">
                         <img src="../img/ui_course.jpg" class="card-img-top" alt="...">
                           <div class="card-body">
-                              <h6 class="card-subtitle mb-2 text-muted">Category: UI/UX</h6>
+                            <h6 class="card-subtitle mb-2 text-muted">Category: UI/UX</h6>
                           </div>
                         </div>
                     </td>
                     <td>
                       <h4>Full Stack Web Development</h4> 
-                      <b>STech stack</b> <br>
+                      <b>Tech stack</b> <br>
                        Java Spring , Angular JS 
                     </td>
                     <td>
-                        <button type="button" class="btn btn-light">Enroll to the course</button> <br>
-                        <button type="button" class="btn btn-light">Details of the course</button>
+                      <button type="button" class="btn btn-light"><i class="fas fa-plus"></i> Enroll to the course</button> <br>
+                      <a href="#" class="btn btn-success btn-block" data-toggle="modal" data-target="#viewDetailsModal">
+                        Details of the course
+                      </a>
                     </td>
                   </tr>
             </tbody>
@@ -251,6 +261,39 @@
       </div>
     </div>
   </footer>
+
+  <!-- MODAL -->
+  <!-- ADD CATEGORY MODAL -->
+  <div class="modal fade" id="viewDetailsModal">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header bg-success text-white">
+          <h5 class="modal-title">Course Details</h5>
+          <button class="close" data-dismiss="modal">
+            <span>&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <h4>Full Stack Web Development</h4>
+          <h6 class="card-subtitle mb-2 text-muted">Category: Web Development</h6>
+          <h6 class="card-subtitle mb-2 text-muted">Mentor: Samith Basnayaka</h6>
+          <h6 class="card-subtitle mb-2 text-muted">Video Count: 5 Videos</h6><br> 
+          <b>Tech stack</b><br>
+           Java Spring , Angular JS<br><br>
+           <p>
+            <b>Description</b><br>
+            This course is designed to help you master the most in-demand and critical components for 
+            becoming a Core Java developer. Especially if you're going for a job interview or have a 
+            Java Project that needs your best performance. This course assumes no prior java experience 
+            so prior Java so it will take you from zero to hero!
+           </p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-success" data-dismiss="modal">Enroll to the course</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

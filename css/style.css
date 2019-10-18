@@ -70,37 +70,3 @@ color: #CACACA;
 font-size: 13px;
 margin-top:5px;
 }
-
-
-@media (max-width: 624px) {
-body {
-  margin: 15px;
-}
-.caption {
-  margin-top: 40px;
-}
-.vid-list-container {
-  padding-bottom: 20px;
-}
-
-}
-
-/* layout.css Style */
-.upload-drop-zone {
-  height: 200px;
-  border-width: 2px;
-  margin-bottom: 20px;
-}
-
-/* skin.css Style*/
-.upload-drop-zone {
-  color: #ccc;
-  border-style: dashed;
-  border-color: #ccc;
-  line-height: 200px;
-  text-align: center
-}
-.upload-drop-zone.drop {
-  color: #222;
-  border-color: #222;
-}
