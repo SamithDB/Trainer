@@ -1,3 +1,0 @@
-# Trainer
-
-Documentation in process
