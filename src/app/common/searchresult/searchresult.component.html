@@ -1,0 +1,121 @@
+<!-- Search Results -->
+<section id="result" class="bg-light py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3">
+          <h3>Search Results...</h3>
+          <p class="lead">Filter by category</p>
+          <a href="#">Web Development</a><br>
+          <a href="#">Cloud Computing</a><br>
+          <a href="#">UI/UX</a><br>
+          <a href="#">Programming</a><br>
+        </div>
+
+        <div class="col-lg-9">
+          <table class="table">
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>
+                    <div class="card" style="width: 18rem;">
+                    <img src="../img/java_course.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h6 class="card-subtitle mb-2 text-muted">Category: Web Development</h6>
+                      </div>
+                    </div>
+                </td>
+                <td>
+                  <h4>Full Stack Web Development</h4> 
+                  <b>Tech stack</b><br>
+                   Java Spring , Angular JS 
+                </td>
+                <td>
+                  <button type="button" class="btn btn-light"><i class="fas fa-plus"></i> Enroll to the course</button> <br>
+                  <a href="#" class="btn btn-success btn-block" data-toggle="modal" data-target="#viewDetailsModal">
+                    Details of the course
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                  <th scope="row">2</th>
+                  <td>
+                      <div class="card" style="width: 18rem;">
+                      <img src="../img/php_course.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h6 class="card-subtitle mb-2 text-muted">Category: Web Development</h6>
+                        </div>
+                      </div>
+                  </td>
+                  <td>
+                    <h4>PHP Web Development</h4> 
+                    <b>Tech stack</b> <br>
+                     PHP , Mysql
+                  </td>
+                  <td>
+                    <button type="button" class="btn btn-light"><i class="fas fa-plus"></i> Enroll to the course</button> <br>
+                    <a href="#" class="btn btn-success btn-block" data-toggle="modal" data-target="#viewDetailsModal">
+                      Details of the course
+                    </a>
+                  </td>
+                </tr><tr>
+                    <th scope="row">3</th>
+                    <td>
+                        <div class="card" style="width: 18rem;">
+                        <img src="../img/ui_course.jpg" class="card-img-top" alt="...">
+                          <div class="card-body">
+                            <h6 class="card-subtitle mb-2 text-muted">Category: UI/UX</h6>
+                          </div>
+                        </div>
+                    </td>
+                    <td>
+                      <h4>UI Fundementals</h4> 
+                      <b>Tech stack</b> <br>
+                       CSS, HTML, JS
+                    </td>
+                    <td>
+                      <button type="button" class="btn btn-light"><i class="fas fa-plus"></i> Enroll to the course</button> <br>
+                      <a href="#" class="btn btn-success btn-block" data-toggle="modal" data-target="#viewDetailsModal">
+                        Details of the course
+                      </a>
+                    </td>
+                  </tr>
+            </tbody>
+          </table>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODAL -->
+  <!-- VIEW DETAILS MODAL -->
+  <div class="modal fade" id="viewDetailsModal">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header bg-success text-white">
+          <h5 class="modal-title">Course Details</h5>
+          <button class="close" data-dismiss="modal">
+            <span>&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <h4>Full Stack Web Development</h4>
+          <h6 class="card-subtitle mb-2 text-muted">Category: Web Development</h6>
+          <h6 class="card-subtitle mb-2 text-muted">Mentor: Samith Basnayaka</h6>
+          <h6 class="card-subtitle mb-2 text-muted">Video Count: 5 Videos</h6><br> 
+          <b>Tech stack</b><br>
+           Java Spring , Angular JS<br><br>
+           <p>
+            <b>Description</b><br>
+            This course is designed to help you master the most in-demand and critical components for 
+            becoming a Core Java developer. Especially if you're going for a job interview or have a 
+            Java Project that needs your best performance. This course assumes no prior java experience 
+            so prior Java so it will take you from zero to hero!
+           </p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-success" data-dismiss="modal">Enroll to the course</button>
+        </div>
+      </div>
+    </div>
+  </div>

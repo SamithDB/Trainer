@@ -5,5 +5,5 @@ import { Component } from '@angular/core';
     templateUrl: './server.components.html'
 })
 export class ServerComponent{
-    user: string = 'Samith';
+    
 }

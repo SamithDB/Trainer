@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "first-app": {
+    "trainer": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/first-app",
+            "outputPath": "dist/trainer",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -64,18 +64,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "first-app:build"
+            "browserTarget": "trainer:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "first-app:build:production"
+              "browserTarget": "trainer:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "first-app:build"
+            "browserTarget": "trainer:build"
           }
         },
         "test": {
@@ -90,6 +90,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -112,15 +113,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "first-app:serve"
+            "devServerTarget": "trainer:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "first-app:serve:production"
+              "devServerTarget": "trainer:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "first-app"
+  "defaultProject": "trainer"
 }
