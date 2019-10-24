@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { ServerComponent } from './server/server.components';
+
 import { SubscribeComponent } from './common/subscribe/subscribe.component';
 import { CommonComponent } from './common/common.component';
 import { HeaderComponent } from './common/header/header.component';
@@ -14,17 +14,24 @@ import { SignupComponent } from './common/signup/signup.component';
 import { LandingComponent } from './common/landing/landing.component';
 import { SearchComponent } from './common/search/search.component';
 import { SearchresultComponent } from './common/searchresult/searchresult.component';
+import { StudentDashbordComponent } from './student/student-dashbord/student-dashbord.component';
+
+
 
 const appRoutes: Routes = [
+  //For common routes
   { path: '', component : LandingComponent},
   { path: 'searchresults', component : SearchresultComponent},
-  { path: 'login', component : LoginComponent}
+  { path: 'login', component : LoginComponent},
+  { path: 'signup', component : SignupComponent},
+
+  //For student routes
+  { path: 'student-dash', component : StudentDashbordComponent}
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
-    ServerComponent,
     SubscribeComponent,
     FooterComponent,
     HeaderComponent,
@@ -33,7 +40,8 @@ const appRoutes: Routes = [
     SignupComponent,
     LandingComponent,
     SearchComponent,
-    SearchresultComponent
+    SearchresultComponent,
+    StudentDashbordComponent
   ],
   imports: [
     BrowserModule,
