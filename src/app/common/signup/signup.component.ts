@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../../data.service';
 
 @Component({
   selector: 'app-signup',
@@ -7,9 +8,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SignupComponent implements OnInit {
 
-  constructor() { }
+  users: Array<any>;
 
-  ngOnInit() {
+  constructor(private _dataService: DataService) {}
+
+  ngOnInit() {}
+
+  signupuser(event){
+    event.preventDefault()
+    const target = event.target;
+    const fname = target.querySelector('#fname').value;
+    const lname = target.querySelector('#lname').value;
+    const uname = target.querySelector('#uname').value;
+    const email = target.querySelector('#email').value;
+    const pass= target.querySelector('#pass').value;
+    const cpass = target.querySelector('#cpass').value;
+   
+    if(pass == cpass){
+      this._dataService.saveUser(fname, lname, uname, email, pass);
+    }
+    
   }
 
 }
