@@ -1,4 +1,6 @@
 # Trainer
+
+Run Dev Env. of Trainer
 npm install
 ng build
 node server.js
