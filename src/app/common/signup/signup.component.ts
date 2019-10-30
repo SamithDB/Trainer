@@ -8,7 +8,7 @@ import { DataService } from '../../data.service';
 })
 export class SignupComponent implements OnInit {
 
-  users: Array<any>;
+  //users: Array<any>;
 
   constructor(private _dataService: DataService) {}
 
@@ -25,9 +25,9 @@ export class SignupComponent implements OnInit {
     const cpass = target.querySelector('#cpass').value;
    
     if(pass == cpass){
+      //Create a new user
       this._dataService.saveUser(fname, lname, uname, email, pass);
     }
-    
   }
 
 }

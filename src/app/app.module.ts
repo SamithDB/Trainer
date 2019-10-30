@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HttpModule } from '@angular/http';
 import { DataService } from './data.service';
+import { User } from 'src/app/models/user';
 
 import { SubscribeComponent } from './common/subscribe/subscribe.component';
 import { CommonComponent } from './common/common.component';
@@ -18,7 +19,11 @@ import { SearchresultComponent } from './common/searchresult/searchresult.compon
 import { StudentDashbordComponent } from './student/student-dashbord/student-dashbord.component';
 import { StudentHeaderComponent } from './student/student-header/student-header.component';    
 
-import { AppRoutingModule} from './app-routing.module';   
+import { AppRoutingModule} from './app-routing.module';
+import { MentorDashbordComponent } from './mentor/mentor-dashbord/mentor-dashbord.component';
+import { MentorHeaderComponent } from './mentor/mentor-header/mentor-header.component';
+import { AdminDashbordComponent } from './admin/admin-dashbord/admin-dashbord.component';
+import { AdminHeaderComponent } from './admin/admin-header/admin-header.component';   
 
 
 @NgModule({
@@ -34,7 +39,11 @@ import { AppRoutingModule} from './app-routing.module';
     SearchComponent,
     SearchresultComponent,
     StudentDashbordComponent,
-    StudentHeaderComponent
+    StudentHeaderComponent,
+    MentorDashbordComponent,
+    MentorHeaderComponent,
+    AdminDashbordComponent,
+    AdminHeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +51,10 @@ import { AppRoutingModule} from './app-routing.module';
     AppRoutingModule,
     HttpModule
   ],
-  providers: [DataService],
+  providers: [
+    DataService,
+    User
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -21,71 +21,26 @@
         <div class="col-lg-9">
           <table class="table">
             <tbody>
-              <tr>
+              <tr *ngFor="let course of searchCourses">
                 <th scope="row">1</th>
                 <td>
-                    <div class="card" style="width: 18rem;">
-                    <img src="/assets/img/java_course.jpg" class="card-img-top" alt="...">
-                      <div class="card-body">
-                        <h6 class="card-subtitle mb-2 text-muted">Category: Web Development</h6>
-                      </div>
-                    </div>
+                  <div class="card" style="width: 18rem;">
+                  <img src="{{course.cover}}" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h6 class="card-subtitle mb-2 text-muted">Category: {{course.category}}</h6>
+                  </div>
+                  </div>
                 </td>
                 <td>
-                  <h4>Full Stack Web Development</h4> 
+                  <h4>{{course.name}}</h4> 
                   <b>Tech stack</b><br>
-                   Java Spring , Angular JS 
+                  {{course.tech}}
                 </td>
                 <td>
-                  <button type="button" class="btn btn-light"><i class="fas fa-plus"></i> Enroll to the course</button> <br>
-                  <a href="#" class="btn btn-success btn-block" data-toggle="modal" data-target="#viewDetailsModal">
-                    Details of the course
-                  </a>
+                  <button type="button" class="btn btn-light"><i class="fas fa-plus"></i> Enroll </button> <br>
+                  <!-- Can add view details button-->
                 </td>
               </tr>
-              <tr>
-                  <th scope="row">2</th>
-                  <td>
-                      <div class="card" style="width: 18rem;">
-                      <img src="/assets/img/php_course.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h6 class="card-subtitle mb-2 text-muted">Category: Web Development</h6>
-                        </div>
-                      </div>
-                  </td>
-                  <td>
-                    <h4>PHP Web Development</h4> 
-                    <b>Tech stack</b> <br>
-                     PHP , Mysql
-                  </td>
-                  <td>
-                    <button type="button" class="btn btn-light"><i class="fas fa-plus"></i> Enroll to the course</button> <br>
-                    <a href="#" class="btn btn-success btn-block" data-toggle="modal" data-target="#viewDetailsModal">
-                      Details of the course
-                    </a>
-                  </td>
-                </tr><tr>
-                    <th scope="row">3</th>
-                    <td>
-                        <div class="card" style="width: 18rem;">
-                        <img src="/assets/img/ui_course.jpg" class="card-img-top" alt="...">
-                          <div class="card-body">
-                            <h6 class="card-subtitle mb-2 text-muted">Category: UI/UX</h6>
-                          </div>
-                        </div>
-                    </td>
-                    <td>
-                      <h4>UI Fundementals</h4> 
-                      <b>Tech stack</b> <br>
-                       CSS, HTML, JS
-                    </td>
-                    <td>
-                      <button type="button" class="btn btn-light"><i class="fas fa-plus"></i> Enroll to the course</button> <br>
-                      <a href="#" class="btn btn-success btn-block" data-toggle="modal" data-target="#viewDetailsModal">
-                        Details of the course
-                      </a>
-                    </td>
-                  </tr>
             </tbody>
           </table>
           

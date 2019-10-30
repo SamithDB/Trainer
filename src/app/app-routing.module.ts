@@ -3,15 +3,13 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { SubscribeComponent } from './common/subscribe/subscribe.component';
 import { CommonComponent } from './common/common.component';
-import { HeaderComponent } from './common/header/header.component';
-import { FooterComponent } from './common/footer/footer.component';
 import { LoginComponent } from './common/login/login.component';
 import { SignupComponent } from './common/signup/signup.component';
 import { LandingComponent } from './common/landing/landing.component';
-import { SearchComponent } from './common/search/search.component';
 import { SearchresultComponent } from './common/searchresult/searchresult.component';
 import { StudentDashbordComponent } from './student/student-dashbord/student-dashbord.component';
-import { StudentHeaderComponent } from './student/student-header/student-header.component';
+import { MentorDashbordComponent } from './mentor/mentor-dashbord/mentor-dashbord.component';
+import { AdminDashbordComponent } from './admin/admin-dashbord/admin-dashbord.component';
 
 const appRoutes: Routes = [
     //For common routes
@@ -22,7 +20,13 @@ const appRoutes: Routes = [
     { path: 'signup', component : SignupComponent},
   
     //For student routes
-    { path: 'student-dash', component : StudentDashbordComponent}
+    { path: 'student-dash', component : StudentDashbordComponent},
+
+    //For mentor routes
+    { path: 'mentor-dash', component : MentorDashbordComponent},
+
+    //For admin routes
+    { path: 'admin-dash', component : AdminDashbordComponent}
   ];
   
   @NgModule({

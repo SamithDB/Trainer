@@ -17,65 +17,25 @@
             </form> 
             <table class="table">
               <tbody>
-                <tr>
+                <tr *ngFor="let course of courses">
                   <th scope="row">1</th>
                   <td>
-                      <div class="card" style="width: 18rem;">
-                      <img src="assets/img/java_course.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h6 class="card-subtitle mb-2 text-muted">Category: Web Development</h6>
-                        </div>
+                    <div class="card" style="width: 18rem;">
+                    <img src="{{course.cover}}" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h6 class="card-subtitle mb-2 text-muted">Category: {{course.category}}</h6>
                       </div>
+                    </div>
                   </td>
                   <td>
-                    <h4>Full Stack Web Development</h4> 
+                    <h4>{{course.name}}</h4> 
                     <b>Tech stack</b> <br>
-                     Java Spring , Angular JS 
+                    {{course.tech}}
                   </td>
                   <td>
-                      <button onclick="location.href='course.html'" type="button" class="btn btn-light" >Go to the course</button> 
+                    <!-- View Course button goes here --> 
                   </td>
                 </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>
-                        <div class="card" style="width: 18rem;">
-                        <img src="assets/img/php_course.jpg" class="card-img-top" alt="...">
-                          <div class="card-body">
-                            <h6 class="card-subtitle mb-2 text-muted">Category: Web Development</h6>
-                          </div>
-                        </div>
-                    </td>
-                    <td>
-                      <h4>PHP Web Development</h4> 
-                      <b>Tech stack</b> <br>
-                       PHP , Mysql
-                    </td>
-                    <td>
-                        <a href="course.html">
-                            <button type="button" class="btn btn-light">Go to the course</button> 
-                        </a>
-                        
-                    </td>
-                  </tr><tr>
-                      <th scope="row">3</th>
-                      <td>
-                          <div class="card" style="width: 18rem;">
-                          <img src="assets/img/ui_course.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h6 class="card-subtitle mb-2 text-muted">Category: UI/UX</h6>
-                            </div>
-                          </div>
-                      </td>
-                      <td>
-                        <h4>Full Stack Web Development</h4> 
-                        <b>Tech stack</b> <br>
-                         Java Spring , Angular JS 
-                      </td>
-                      <td>
-                        <button type="button" class="btn btn-light">Go to the course</button> 
-                      </td>
-                    </tr>
               </tbody>
             </table>
             

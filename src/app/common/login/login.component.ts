@@ -6,11 +6,14 @@ import { DataService } from '../../data.service';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements OnInit {
 
-  users: Array<any>;
+
+
+export class LoginComponent implements OnInit {
   
-  constructor(private _dataService: DataService) { }
+  //users: Array<any>;
+  
+  constructor(private _dataService: DataService ){ }
 
   ngOnInit() {
   }
@@ -21,11 +24,7 @@ export class LoginComponent implements OnInit {
     const uname = target.querySelector('#uname').value;
     const email = target.querySelector('#uname').value;
     const pass= target.querySelector('#pass').value;
-    //console.log(pass);
-    this._dataService.getUsers().subscribe(res => {
-        console.log(res);
-        this.users = res
-    }); 
+    this._dataService.login(uname, email, pass);
   } 
 
 }
