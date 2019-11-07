@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-md navbar-light fixed-top py-4" id="main-nav">
     <div class="container">
-      <a href="#home" class="navbar-brand">
+      <a routerLink="/" class="navbar-brand">
         <img src="assets/img/tlogo.png" width="35" height="35" alt="">
         <h3 class="d-inline align-middle">rainer.com</h3>
       </a>
@@ -10,19 +10,19 @@
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a href="#home" class="nav-link">Home</a>
-          </li>
-          <li class="nav-item">
-            <a href="#about" class="nav-link">About</a>
+            <a routerLink="/" class="nav-link">Home</a>
           </li>
           <li class="nav-item">
             <a routerLink="/searchresults" class="nav-link">Courses</a>
           </li>
-          <li class="nav-item">
-            <a href="#contact" class="nav-link">Subscribe</a>
-          </li>
-          <li class="nav-item">
+          <li class="nav-item" *ngIf="currenctUser.uname == 'Default'">
             <a routerLink="/login" class="nav-link">Login</a>
+          </li>
+          <li class="nav-item" *ngIf="currenctUser.uname != 'Default' && currenctUser.type == 'mentor'">
+            <a routerLink="/mentor-dash" class="nav-link"><i class="fa fa-user" aria-hidden="true"></i> {{currenctUser.uname}}</a>
+          </li>
+          <li class="nav-item" *ngIf="currenctUser.uname != 'Default' && currenctUser.type == 'user'">
+            <a routerLink="/student-dash" class="nav-link"><i class="fa fa-user" aria-hidden="true"></i> {{currenctUser.uname}}</a>
           </li>
         </ul>
       </div>

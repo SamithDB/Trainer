@@ -5,7 +5,9 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HttpModule } from '@angular/http';
 import { DataService } from './data.service';
+import { CourseService } from './course.service';
 import { User } from 'src/app/models/user';
+import { Course } from 'src/app/models/course';
 
 import { SubscribeComponent } from './common/subscribe/subscribe.component';
 import { CommonComponent } from './common/common.component';
@@ -53,7 +55,9 @@ import { AdminHeaderComponent } from './admin/admin-header/admin-header.componen
   ],
   providers: [
     DataService,
-    User
+    User,
+    CourseService,
+    Course
   ],
   bootstrap: [AppComponent]
 })

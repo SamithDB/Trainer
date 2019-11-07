@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
 import { Http, Headers, RequestOptions } from '@angular/http';
-import { map } from 'rxjs/operators';
+import { map } from 'rxjs/operators'; 
 import { User } from './models/user';
 import { Router } from '@angular/router';
 var user_new = new User();
@@ -12,6 +12,7 @@ export class DataService {
 
   constructor(private _http: Http, private router: Router) { }
 
+  //User Dummy Data
   user = [
     {
       fname:'Samith',
@@ -41,12 +42,12 @@ export class DataService {
       status:'A'
     }] 
 
+  //Return All Users
   getUsers() {
-
     return this.user;
-
   }
 
+  //Save New User
   saveUser(fname: string, lname: string, uname: string, email: string, pass: string) {
     user_new.fname =fname;
     user_new.lname =lname;
@@ -57,11 +58,14 @@ export class DataService {
     user_new.status ='A';
     this.user.push(user_new);
     console.log(this.user);
+    this.router.navigate(["login"]);
     
   }
 
+  //User Login
   login(uname, email, pass) {
-    var status = "null";
+    var statusUser : string = "";
+    var statusPass : string= "";
     for(var counter:number = 0; counter<this.user.length; counter++){
       if(this.user[counter].uname == uname || this.user[counter].email == email){
         if(this.user[counter].password == pass) {
@@ -69,17 +73,43 @@ export class DataService {
           if(this.user[counter].type == 'admin'){
             this.router.navigate(["admin-dash"]);
           }else if(this.user[counter].type == 'mentor'){
+            statusUser = "correct";
+            statusPass = "correct";
+            try {
+              if(JSON.parse(localStorage.getItem("user")) == null){
+                localStorage.setItem("user", JSON.stringify(this.user[counter])); //Set User
+              }
+            } catch (error) {
+              console.log(error);
+            }
             this.router.navigate(["mentor-dash"]);
           }else{
-            this.router.navigate(["student-dash"])  ;
+            statusUser = "correct";
+            statusPass = "correct";
+            try {
+              if(JSON.parse(localStorage.getItem("user")) == null){
+                localStorage.setItem("user", JSON.stringify(this.user[counter])); //Set User
+              }
+            } catch (error) {
+              console.log(error);
+            }
+            this.router.navigate(["student-dash"]);
           }
-        }else{
-          //password incorect.
         }
       }
-      //User not found.
     }
-    
+    if(statusPass == "" || statusUser == ""){
+      alert("Credentials Incorrect!");
+    }
+  }
+
+  //Logout the User
+  logout(){
+    console.log("loging out");
+    localStorage.removeItem('courseslist');
+    localStorage.removeItem('userlist');
+    localStorage.removeItem('user');
+    this.router.navigate([""]);
   }
 
 }

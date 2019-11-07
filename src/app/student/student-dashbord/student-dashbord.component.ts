@@ -1,19 +1,28 @@
 import { Component, OnInit } from '@angular/core';
-import {CourseService} from '../../course.service';
-//import { from } from 'rxjs';
+import { CourseService } from '../../course.service';
+import { User } from '../../models/user';
+import { Course} from '../../models/course';
 
 @Component({
   selector: 'app-student-dashbord',
   templateUrl: './student-dashbord.component.html',
-  styleUrls: ['./student-dashbord.component.css'],
-  providers: [CourseService]
+  styleUrls: ['./student-dashbord.component.css']
 })
 export class StudentDashbordComponent implements OnInit {
-  courses: { name:string, category:string, tech:string, description:string, status:string, cover:string, uname:string }[] =[];
+  enrolled: Course [] =[];
+  currenctUser : User;
   constructor(private courseService: CourseService) { }
 
   ngOnInit() {
-    this.courses = this.courseService.myCourse;
+    //Load Current User
+    try {
+      this.currenctUser = JSON.parse(localStorage.getItem("user"))
+      console.log(this.currenctUser);
+    } catch (error) {
+      console.log(error);
+    }
+    //
+    this.enrolled = this.courseService.enrolledCourses;
   }
 
 }

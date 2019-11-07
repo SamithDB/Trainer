@@ -30,4 +30,14 @@ export class SignupComponent implements OnInit {
     }
   }
 
+  loginuser(event){
+    event.preventDefault();
+    const target = event.target;
+    const uname = target.querySelector('#uname').value;
+    const email = target.querySelector('#uname').value;
+    const pass= target.querySelector('#pass').value;
+    this._dataService.login(uname, email, pass);
+  } 
+
+
 }
